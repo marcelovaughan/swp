@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## Demo
-Open [https://sw-planets-ui.surge.sh/]
+Open [https://sw-planets-ui.surge.sh/](https://sw-planets-ui.surge.sh) 
 
 
 ## Available Scripts
