@@ -12,7 +12,6 @@ export default function PlanetCard(props) {
     useEffect(() => {    
         if(isActive){
             setTimeout(()=>{
-                console.log('chamou')
                 handlegGetPlanet(index+1)
             }, 2500)
         }           
