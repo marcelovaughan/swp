@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Planet Card Render Render the component 1`] = `
+"<PlanetCard index={{...}} isActive={false} planet={{...}} loading={false} handlegGetPlanet={[Function: handlegGetPlanet]}>
+  <li className=\\"frames__item glide__slide\\">
+    <div className=\\"frame\\" data-ref=\\"planet[el]\\">
+      <div className=\\"notch-contain notch-top\\" />
+      <div className=\\"content-contain\\" />
+      <div className=\\"bottom-notch-contain\\">
+        <div className=\\"notch-left\\" />
+        <div className=\\"notch-right\\" />
+      </div>
+    </div>
+  </li>
+</PlanetCard>"
+`;

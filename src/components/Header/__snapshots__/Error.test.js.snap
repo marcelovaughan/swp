@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Render Render the component 1`] = `
+"<Header>
+  <header>
+    <h1 className=\\"logo\\">
+      StarWars - Planets
+    </h1>
+    <h2>
+      PLANETS
+    </h2>
+  </header>
+</Header>"
+`;

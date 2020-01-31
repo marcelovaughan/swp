@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { getRandomInt } from './Utils/functions'
 import { getPlanetsCount, getPlanet } from './api/swapi'
+import { carouselOptions } from './Utils/carouselOptions'
 
 import './App.css'
 
@@ -10,38 +11,6 @@ import Loader from './components/Loader'
 import Header from './components/Header'
 import Error from './components/Error'
 
-const carouselOptions = { 
-  focusAt: "center",
-  type: "slide",
-  startAt: 0,  
-  perView: 3,
-  peek: 50,
-  gap: 30,
-  autoplay: false,
-  hoverpause: !1,
-  animationDuration: 2e3,
-  rewindDuration: 2e3,
-  perTouch: 0,
-  breakpoints: {
-      480: {
-          gap: 5,
-          peek: 20,
-          perView: 1
-      },
-      768: {
-          perView: 2
-      },
-      1360: {
-          perView: 3
-      },
-      1600: {
-          perView: 4
-      },
-      1960: {
-          perView: 3
-      }
-  }
-};
 
 function App() {
   const [planetsCount, setPlanetsCount] = useState(0)
@@ -72,7 +41,6 @@ function App() {
       setLoading(false)
     }
   }, []);
-
 
   useEffect(() => {    
     _getPlanetsCount().then( async () => {

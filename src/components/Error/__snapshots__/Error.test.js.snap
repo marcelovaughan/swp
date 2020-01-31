@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Render Render the component 1`] = `
+"<Error>
+  <div className=\\"error-wrapper\\">
+    <Header>
+      <header>
+        <h1 className=\\"logo\\">
+          StarWars - Planets
+        </h1>
+        <h2>
+          PLANETS
+        </h2>
+      </header>
+    </Header>
+    <div className=\\"error\\">
+      <div className=\\"error-img\\" />
+      <div className=\\"error-msg\\">
+        <h2>
+          ESTA PÁGINA NÃO ESTÁ ARMADA E OPERACIONAL.
+        </h2>
+        <p>
+          Perdemos o contato com nossa fonte de dados.
+        </p>
+      </div>
+    </div>
+  </div>
+</Error>"
+`;

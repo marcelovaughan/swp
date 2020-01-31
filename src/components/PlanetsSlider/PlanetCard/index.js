@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import PropTypes from "prop-types";
 
-import { formatNumber } from '../../../Utils/functions';
+import { formatNumber, getFilmsCounterText } from '../../../Utils/functions';
 import Loader from '../../Loader'
+
 
 export default function PlanetCard(props) {
     
@@ -11,6 +12,7 @@ export default function PlanetCard(props) {
     useEffect(() => {    
         if(isActive){
             setTimeout(()=>{
+                console.log('chamou')
                 handlegGetPlanet(index+1)
             }, 2500)
         }           
@@ -25,23 +27,25 @@ export default function PlanetCard(props) {
                     <div className="content-contain">
                     {planet && !loading &&
                         <React.Fragment>
-                            <h2>{planet && planet.name && planet.name}</h2>
+                            <h2 data-test="name">{planet && planet.name && planet.name}</h2>
 
                             <p className="planet-attribute">
                                 <span className="font-bold">Population: </span>
-                                <span className="font-light">{planet && planet.population && formatNumber(planet.population)}</span>
+                                <span className="font-light" data-test="population">{planet && planet.population && formatNumber(planet.population)}</span>
                             </p>
                             <p className="planet-attribute">
                                 <span className="font-bold">Climate: </span>
-                                <span className="font-light">{planet && planet.climate && planet.climate}</span>
+                                <span className="font-light" data-test="climate">{planet && planet.climate && planet.climate}</span>
                             </p>
                             <p className="planet-attribute">
                                 <span className="font-bold">Terrain: </span>
-                                <span className="font-light">{planet && planet.terrain && planet.terrain}</span>
+                                <span className="font-light" data-test="terrain">{planet && planet.terrain && planet.terrain}</span>
                             </p>
                             <p className="planet-attribute">
                                 <span className="font-bold">Featured in: </span>
-                                <span className="font-light">{planet && planet.films && planet.films.length} {planet.films.length > 1 ? 'films' : 'film' }</span>
+                                <span className="font-light" data-test="films">
+                                    {planet && planet.films && `${ getFilmsCounterText(planet.films) }`}                                    
+                                </span>
                             </p>                            
                         </React.Fragment>                        
                     }
