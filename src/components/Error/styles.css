@@ -1,0 +1,38 @@
+.error-wrapper{
+    height: 100vh;
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  .error {
+    margin: 0px auto;
+    width: 78%;
+    display: inline-block;
+    padding: 15px;
+  }
+  
+  .error h2 {
+    color: #ffea00;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .error p {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .error-img {
+    background: url('../../assets/img/Death_Star_II.png');
+    height: 250px;
+    width: 250px;
+    background-size: contain;
+    text-align: center;
+    color: #fff;
+    font-size: 62px;
+    display: flex;
+    margin: 20px auto;  
+  }

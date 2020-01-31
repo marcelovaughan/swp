@@ -1,0 +1,123 @@
+#spinner {
+    position: fixed;
+    z-index: 102;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -40px;
+  }
+  
+  #spinner .loader, .module-spinner .loader {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+  }
+  
+  .loading-animation, #spinner .loader, .module-spinner .loader {
+    background-position: center;
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/shared/loader_empire-985b0940808a.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .loading-animation:before, #spinner .loader:before, .module-spinner .loader:before {
+    height: 52px;
+    width: 52px;
+    margin: -26px 0 0 -26px;
+    animation: clockwise 5s infinite linear;
+  }
+  
+  .loading-animation:before, #spinner .loader:before, .module-spinner .loader:before, .loading-animation:after, #spinner .loader:after, .module-spinner .loader:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    border-top-color: transparent;
+    box-sizing: border-box;
+  }
+  
+  .loading-animation:after, #spinner .loader:after, .module-spinner .loader:after {
+    height: 66px;
+    width: 66px;
+    margin: -33px 0 0 -33px;
+    border-width: 4px;
+    border-left-color: transparent;
+    animation: counter-clockwise 2.25s infinite linear;
+  }
+  
+  .loading-animation:before, #spinner .loader:before, .module-spinner .loader:before, .loading-animation:after, #spinner .loader:after, .module-spinner .loader:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    border-top-color: transparent;
+    box-sizing: border-box;
+  }
+  
+  @-webkit-keyframes clockwise {
+    from {
+        transform: rotate(0deg)
+    }
+  
+    to {
+        transform: rotate(360deg)
+    }
+  }
+  
+  @-moz-keyframes clockwise {
+    from {
+        transform: rotate(0deg)
+    }
+  
+    to {
+        transform: rotate(360deg)
+    }
+  }
+  
+  @keyframes clockwise {
+    from {
+        transform: rotate(0deg)
+    }
+  
+    to {
+        transform: rotate(360deg)
+    }
+  }
+  
+  @-webkit-keyframes counter-clockwise {
+    from {
+        transform: rotate(0deg)
+    }
+  
+    to {
+        transform: rotate(-360deg)
+    }
+  }
+  
+  @-moz-keyframes counter-clockwise {
+    from {
+        transform: rotate(0deg)
+    }
+  
+    to {
+        transform: rotate(-360deg)
+    }
+  }
+  
+  @keyframes counter-clockwise {
+    from {
+        transform: rotate(0deg)
+    }
+  
+    to {
+        transform: rotate(-360deg)
+    }
+  }

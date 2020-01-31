@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+@font-face {font-family: "DINNextW01-Regular"; src: url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.eot"); src: url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.woff") format("woff"), url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.svg#DINNextW01-Regular") format("svg"); }
+@font-face {font-family: "DINNextW01-Bold"; src: url("//db.onlinewebfonts.com/t/78c77b16334d415ac17d5a812345a0a1.eot"); src: url("//db.onlinewebfonts.com/t/78c77b16334d415ac17d5a812345a0a1.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/78c77b16334d415ac17d5a812345a0a1.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/78c77b16334d415ac17d5a812345a0a1.woff") format("woff"), url("//db.onlinewebfonts.com/t/78c77b16334d415ac17d5a812345a0a1.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/78c77b16334d415ac17d5a812345a0a1.svg#DINNextW01-Bold") format("svg"); }
+@font-face {font-family: "DINNextW01-Light"; src: url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.eot"); src: url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.woff") format("woff"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.svg#DINNextW01-Light") format("svg"); }
+
+body{
+  background-image: url('./assets/img/star-wars-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "DINNextW01-Regular";
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.font-light{
+  font-family: "DINNextW01-Light";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.font-bold{
+  font-family: "DINNextW01-Bold";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  height: 90vh;
   display: flex;
-  flex-direction: column;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column; 
+}
+
+header{
+  width: 100%;
+  height: 12vh;
+  margin: 0;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
 }
 
-.App-link {
-  color: #61dafb;
+header h2{
+  font-weight: 100;
+  font-family: "DINNextW01-Light", sans-serif;
+  margin: 5px 0;
+  font-size: 15px;
+  text-shadow: 1px 1px 2px black;
+  color: #ffea00;
+  letter-spacing: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo {
+  display: block;
+  width: 100%;
+  max-width: 203px;
+  height: 100%;
+  max-height: 88px;
+  margin: 0px auto 0;
+  box-sizing: border-box;
+  background-image: url('./assets/img/sw_logo.png');
+  background-size: contain;
+  overflow: hidden;
+  text-indent: -5000px;
+  background-repeat: no-repeat;
+  background-position: center;  
+}
+
+
+@media(max-width: 42.5em) {
+  header {
+    height:12vh;    
+    margin-top: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .frame {
+      height:50vh
+  }
+
+  .App{
+    height: 85vh;
+  }
+}
+
+.btn-next{
+  position: absolute;
+  bottom: 50px;
+  -webkit-transition: background-color 250ms;
+  -moz-transition: background-color 250ms;
+  transition: background-color 250ms;
+  border-radius: 20px 4px 20px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  margin: 0;
+  background-color: rgba(213,0,14,0.6);
+  padding: 0;
+  width: 150px;
+  height: 72px;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  border: 0;
+  outline: none;
+}
+
+
+@media(max-width: 42.5em) {
+  .btn-next {
+    bottom: 20px;
+    height: 48px;
   }
 }
