@@ -1,5 +1,5 @@
 
-const URL_API = "https://swapi.co/api"
+const URL_API = "http://swapi.dev/api"
 
 export const getPlanet = async (planetId) => { 
     const data = await fetch(URL_API + "/planets/" + planetId)
