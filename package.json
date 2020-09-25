@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy-dev": "npm run build && mv build/index.html build/200.html && surge build https://sw-planets-ui.surge.sh/"
+    "deploy-dev": "npm run build && mv build/index.html build/200.html && surge build https://sw-planets-ui.surge.sh/",
+    "release": "npm run build && mv build/index.html build/200.html"
   },
   "eslintConfig": {
     "extends": "react-app"
