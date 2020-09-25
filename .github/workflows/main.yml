@@ -19,4 +19,5 @@ jobs:
         ftp-server: ftp://ftp.marcelofaria.com.br/
         ftp-username: raiz@marcelofaria.com.br
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir:  /sw
+        local-dir:  /public
+        remote-root: /sw 
