@@ -16,8 +16,7 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ftp://ftp.marcelofaria.com.br/
+        ftp-server: ftp://ftp.marcelofaria.com.br/sw
         ftp-username: raiz@marcelofaria.com.br
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir:  /public
-        remote-root: /sw 
